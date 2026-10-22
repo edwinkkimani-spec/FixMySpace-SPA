@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixMySpace | Campus Issues</title>
+  <link rel="stylesheet" href="style/style.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1><u>FixMySpace</u></h1>
+    <p>Making our campus a better place.</p>
+  </header>
+
+  <main>
+    <section class="report-section">
+      <h2>Report a Campus Issue</h2>
+
+      <form id="report-form">
+        <label for="title">Issue title</label>
+        <input
+          type="text"
+          id="title"
+          placeholder="e.g. Broken classroom projector"
+          required
+        >
+
+        <label for="location">Location</label>
+        <input
+          type="text"
+          id="location"
+          placeholder="e.g. Room B12"
+          required
+        >
+
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="">Choose a category</option>
+          <option value="Classroom">Classroom</option>
+          <option value="Washroom">Washroom</option>
+          <option value="Electricity">Electricity</option>
+          <option value="Equipment">Equipment</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          placeholder="Describe the problem..."
+          required
+        ></textarea>
+
+        <button type="submit">Submit Report</button>
+      </form>
+
+      <p id="message" role="status"></p>
+    </section>
+
+    <section class="reports-section">
+      <h2>Campus Reports</h2>
+      <div id="report-list">
+        <p>Reports will appear here.</p>
+      </div>
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>

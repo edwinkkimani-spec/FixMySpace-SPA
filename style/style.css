@@ -1,0 +1,26 @@
+body{
+    background-color: #f3f6fb;
+    text-align: center;
+}
+
+header{
+    text-align: center;
+    color: firebrick;
+    padding:30px 16px;
+    background-color: #f3f6fb;
+}
+
+button{
+    cursor: pointer;
+    font-weight:bold;
+    color: white;
+    background-color:#011a52;
+
+}
+button:hover{
+  background-color:rgb(48, 39, 27);
+}
+
+form{
+    display: grid;
+}

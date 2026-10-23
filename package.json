@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/edwinkkimani-spec/FixMySpace-SPA#readme",
   "devDependencies": {
-    "jest": "^30.5.2"
+    "jest": "^30.5.2",
+    "json-server": "^1.0.0-beta.15"
   }
 }

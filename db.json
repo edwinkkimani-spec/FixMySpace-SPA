@@ -1,0 +1,53 @@
+{
+  "reports": [
+    {
+      "title": "broken doors",
+      "location": "Room c",
+      "category": "Classroom",
+      "description": "The issue need to be addressed",
+      "status": "Unresolved",
+      "id": "a4-mqEFSBVk"
+    },
+    {
+      "title": "gbvb",
+      "location": "Room c",
+      "category": "Washroom",
+      "description": "ttehjs",
+      "status": "Unresolved",
+      "id": "MBP81pH2EdM"
+    },
+    {
+      "title": "fooiknxnnn",
+      "location": "Room c",
+      "category": "Washroom",
+      "description": "tgxg",
+      "status": "Unresolved",
+      "id": "ocUB5z3bX58"
+    },
+    {
+      "title": "Broken glass",
+      "location": "Room:B12",
+      "category": "Washroom",
+      "description": "The problem needs to be fixed before tommorrow",
+      "status": "Unresolved",
+      "id": "yc8Lmx-s42o"
+    },
+    {
+      "title": "bcbfh",
+      "location": "Room:B12",
+      "category": "Electricity",
+      "description": "The lames",
+      "status": "Unresolved",
+      "id": "y-e06iqmc0c"
+    },
+    {
+      "title": "Window torn down",
+      "location": "Room:B12",
+      "category": "Washroom",
+      "description": "The door opened",
+      "status": "Unresolved",
+      "id": "10sB_KSTjls"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

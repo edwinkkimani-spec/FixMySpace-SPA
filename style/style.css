@@ -2,10 +2,9 @@ body{
     background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("../images/uni.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    
     background-attachment: fixed;
     text-align: center;
-    
+    font-size:100vh;
 }
 
 header{
@@ -43,7 +42,7 @@ section{
 }
 
 /*reports section*/
-.reports-section{
+.reports-sect{
     background-color: rgb(248, 255, 248);
 }
 
@@ -123,7 +122,7 @@ nav a:hover{
 
 
 
-#search-button {
+#search-btn {
     margin: 0;
     padding: 10px 16px;
     width: auto;
@@ -133,7 +132,7 @@ nav a:hover{
     border: none;
 }
 
-#search-button:hover{
+#search-btn:hover{
     background-color: rgb(4, 4, 111);
 }
 
@@ -253,7 +252,7 @@ footer p{
     margin:10px 0;
 }
 
-.footer-links{
+.footer.b{
    display: flex;
    gap:23px;
    justify-content: center;

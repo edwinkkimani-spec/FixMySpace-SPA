@@ -10,13 +10,13 @@ const reportL = document.getElementById("report3");
 const messages = document.getElementById("message");
 const searchIn = document.getElementById("search5");
 const search= document.getElementById("search-btn");
-const  messageSEARCH = document.getElementById("search-message");
+const  messageSEARCH = document.getElementById("search-mess");
 
 //Storing the reports while page still open
 let reports = [];
 
 //Creating a function that will display reports
-function displayReports(reportsToDisplay) {
+function Reportsdisplayed(reportsToDisplay) {
   reportL.innerHTML = "";
 
   if (reportsToDisplay.length === 0) {
@@ -59,7 +59,7 @@ function displayReports(reportsToDisplay) {
     });
 
     stat.addEventListener("change", function () {
-      report.status = statusSelect.value;
+      report.status = stat.value;
       UpdateDashboard();
     });
 
@@ -93,9 +93,31 @@ function UpdateDashboard() {
   ).length;
 }
 
+const ApI_URL ="http://localhost:3002/reports"
+
+async function Reportsfetch(){
+     try{
+     const response=await fetch(ApI_URL)
+  
+
+     if(!response.ok){
+      throw new error("Failed to fetch reports")
+     }
+     const data= await response.json()
+     console.log(data)
+    reports = data;
+
+     Reportsdisplayed(reports)
+     UpdateDashboard()
+     }catch(error){
+      console.error("Error occured fetching reports",error)
+      messages.textContent="Unable to load reports" 
+     }
+}
+
 
 //Submit another campus reprot
-report.addEventListener("submit", function (event) {
+report.addEventListener("submit", async function (event) {
   event.preventDefault();
 
   try {
@@ -116,9 +138,20 @@ report.addEventListener("submit", function (event) {
       messages.textContent = "Please complete all fields";
       return;
     }
-    reports.push(newr);
+    const response= await fetch(ApI_URL,{
+        method:"POST",
+        headers:{
+          "content-Type":"application/json"
+        }  ,   
+       body:JSON.stringify(newr)
+      })
+        if(!response.ok){
+         throw new  Error("Failed to submit report.")
+        }
+       const data= await response.json()
+        reports.push(data)
 
-    displayReports(reports);
+    Reportsdisplayed(reports);
     UpdateDashboard();
 
     messages.textContent = "Your report was submitted successfully";
@@ -141,7 +174,7 @@ search.addEventListener("click", function () {
     );
   });
 
-  displayReports(matchingReports);
+  Reportsdisplayed(matchingReports);
 
   if (matchingReports.length === 0) {
     searchMessage.textContent = "No matching reports found.";
@@ -152,13 +185,12 @@ search.addEventListener("click", function () {
 });
 
 // Clear the search and show all reports when the search box is emptied.
-searchIn.addEventListener("input", function () {
-  if (searchIn.value.trim() === "") {
-    messageSEARCH.textContent = "";
-    displayReports(reports);
-  }
-});
-
+searchIn.addEventListener("input",function(){
+   if(searchIn.value.trim()===""){
+    messageSEARCH.textContent="";
+    Reportsdisplayed(reports)
+   }
+})
 // Show a message when a category is selected.
 cate1.addEventListener("change", function () {
   if (cate1.value !== "") {
@@ -167,5 +199,4 @@ cate1.addEventListener("change", function () {
 });
 
 // Initial page setup.
-displayReports(reports);
-UpdateDashboard();
+Reportsfetch()

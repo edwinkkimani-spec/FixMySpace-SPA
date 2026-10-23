@@ -1,4 +1,4 @@
-import { database, ref, push, set, get, onValue } from "./firebase.js";
+
 //Getting elements by id
 const reportForm = document.getElementById("report-form");
 const titleInput = document.getElementById("title");

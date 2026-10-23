@@ -1,3 +1,4 @@
+import { database, ref, push, set, get, onValue } from "./firebase.js";
 //Getting elements by id
 const reportForm = document.getElementById("report-form");
 const titleInput = document.getElementById("title");
@@ -92,11 +93,11 @@ function UpdateDashboard() {
   ).length;
 }
 
-const API_URL = "https://jsonplaceholder.typicode.com/posts";
+const API_URL = "";
 
 async function fetchReports() {
   try {
-    const response = await fetch(API_URL);
+    const response = await fetch();
 
     if (!response.ok) {
       throw new Error("Failed to fetch reports");
@@ -195,4 +196,5 @@ categoryInput.addEventListener("change", function () {
 });
 
 // Initial page setup.
-fetchReports();
+displayReports(reports);
+UpdateDashboard();

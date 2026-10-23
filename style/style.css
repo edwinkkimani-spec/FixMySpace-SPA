@@ -47,20 +47,20 @@ section{
     background-color: rgb(248, 255, 248);
 }
 
-#report-list{
+#report3{
   display: grid;
   gap:12px;
   text-align: left;
 }
 
-#report-list article{
+#report3 article{
     padding: 16px;
     border:1px solid #ddd;
      border-radius: 10px;
     background-color: white;
 }
 
-#report-list h3{
+#report3 h3{
     color:firebrick;
 }
 
@@ -102,7 +102,7 @@ nav a:hover{
     text-decoration: underline;
 }
 
-.search-container{
+.search{
 
     position: absolute;
     right: 30px;
@@ -112,7 +112,7 @@ nav a:hover{
 
 }
 
-#search-input {
+#search-2 {
     width: 220px;
     padding: 10px 14px;
     border: 1px solid #cbd5e1;
@@ -186,7 +186,7 @@ textarea {
     font-size: 15px;
     border:1px solid rgb(215, 15, 15);
 }
-#category{
+#category2{
     border-radius: 440px;
     padding: 5px 30px;
     font-size: 15px;
@@ -220,18 +220,18 @@ html {
     margin-top: 20px;
 }
 
-.stat-card{
+.cards{
     padding: 16px;
     border-radius: 10px;
     background-color:white;
     text-align: center;
 }
 
-.stat-card h3{
+.cards h3{
      color:red;
 }
 
-.stat-card p {
+.cards p {
     font-size: 28px;
     font-weight: bold;
     color:black;

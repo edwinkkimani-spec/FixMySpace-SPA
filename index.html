@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FixMySpace | Campus Issues</title>
+  <title>FixMySpace || Campus Issues</title>
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
   <nav>
   <a href="#home">Home</a>
-  <a href="#report">Report an Issue</a>
-  <a href="#report-list">Campus Reports</a>
+  <a href="#report2">Report an Issue</a>
+  <a href="#report3">Campus Reports</a>
   <a href="#about">About / Help</a>
-     <div class="search-container">
+     <div class="search-2">
    <input
     type="search"
-    id="search-input"
+    id="search5"
     placeholder="Search reports..."
     aria-label="Search campus reports"
   >
 
-  <button type="button" id="search-button">Search</button>
+  <button type="button" id="search-btn">Search</button>
      </div>
 
 </nav>
@@ -37,32 +37,32 @@
   <p>Welcome to FixMySpace. Help us make our campus better.</p>
 
   <div class="dashboard-cards">
-    <article class="stat-card">
+    <article class="cards">
       <h3>Total Reports</h3>
       <p id="total-reports">0</p>
     </article>
 
-    <article class="stat-card">
+    <article class="cards">
       <h3>Unresolved</h3>
       <p id="unresolved-reports">0</p>
     </article>
 
-    <article class="stat-card">
+    <article class="cards">
       <h3>In Progress</h3>
       <p id="progress-reports">0</p>
     </article>
 
-    <article class="stat-card">
+    <article class="cards">
       <h3>Resolved</h3>
       <p id="resolved-reports">0</p>
     </article>
   </div>
 </section>
 
-<section id="report" class="report-section">
+<section id="report2" class="report-section">
       <h2>Report a Campus Issue</h2>
 
-      <form id="report-form">
+      <form id="report">
         <label for="title">Issue title</label>
         <input
           type="text"
@@ -80,7 +80,7 @@
         >
 
         <label for="category">Category</label>
-        <select id="category" required>
+        <select id="category2" required>
           <option value="">Choose a category</option>
           <option value="Classroom">Classroom</option>
           <option value="Washroom">Washroom</option>
@@ -105,7 +105,7 @@
     <section class="reports-section">
       <h2>Campus Reports</h2>
        <p id="search-message" role="status"></p>
-      <div id="report-list">
+      <div id="report3">
         <p>Reports will appear here.</p>
       </div>
     </section>

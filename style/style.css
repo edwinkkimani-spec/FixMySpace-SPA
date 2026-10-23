@@ -1,26 +1,279 @@
 body{
-    background-color: #f3f6fb;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("/images/uni.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-attachment: fixed;
     text-align: center;
+    
 }
 
 header{
     text-align: center;
-    color: firebrick;
+    color:white;
     padding:30px 16px;
-    background-color: #f3f6fb;
 }
 
 button{
     cursor: pointer;
     font-weight:bold;
-    color: white;
-    background-color:#011a52;
+    background-color: rgb(27, 203, 27);
+    width:150px;
+     justify-self:center;
+     margin: 30px;
+     padding:5px 20px;
+     border-radius: 55px ;
+
 
 }
 button:hover{
-  background-color:rgb(48, 39, 27);
+  background-color:rgb(13, 158, 13);
 }
 
 form{
     display: grid;
+    gap:10px;
+}
+section{
+    margin-top: 30px;
+ background:rgb(13, 180, 161);
+  padding: 34px 80px;
+  border-radius: 24px;
+  box-shadow: 0 3px 12px #0000000d;
+}
+
+/*reports section*/
+.reports-section{
+    background-color: rgb(248, 255, 248);
+}
+
+#report-list{
+  display: grid;
+  gap:12px;
+  text-align: left;
+}
+
+#report-list article{
+    padding: 16px;
+    border:1px solid #ddd;
+     border-radius: 10px;
+    background-color: white;
+}
+
+#report-list h3{
+    color:firebrick;
+}
+
+/*about-section*/
+#about{
+    background-color: rgb(41, 3, 3);
+    color: white;
+    text-align: left;
+}
+
+#about h2 {
+    text-align: center;
+    color:firebrick;
+}
+
+/*nav links with search bar*/
+nav{
+    background-color:black;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav a {
+ color:firebrick;
+ 
+ padding: 5px 20px;
+ font-weight: bold;
+ text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+.search-container{
+
+    position: absolute;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+#search-input {
+    width: 220px;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+
+
+
+#search-button {
+    margin: 0;
+    padding: 10px 16px;
+    width: auto;
+    border-radius: 20px;
+    background-color:blue;
+    color: white;
+    border: none;
+}
+
+#search-button:hover{
+    background-color: rgb(4, 4, 111);
+}
+
+@media (max-width: 700px) {
+    .search-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #search-input {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Smaller screens */
+@media (max-width: 700px) {
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+main {
+  width: min(900px, 92%);
+  margin: 30px auto;
+  display: grid;
+  gap: 24px;
+}
+
+input:focus{
+    outline:2px solid #173b67;
+}
+input{
+    border:1px solid white ;
+    border-radius:440px;
+    padding:5px 30px;
+    font-size: 15px;
+
+}
+
+textarea {
+  min-height: 40px;
+  resize: vertical;
+  padding: 5px 50px;
+
+}
+#description{
+    border-radius: 440px;
+    padding: 5px 30px;
+    font-size: 15px;
+    border:1px solid rgb(215, 15, 15);
+}
+#category{
+    border-radius: 440px;
+    padding: 5px 30px;
+    font-size: 15px;
+    border:1px solid rgb(215, 15, 15); 
+}
+#text{
+    color:blue;
+}
+#messages{
+    color:#166534;
+}
+header h1{
+    margin: 0 0 8px;
+}
+header p{
+    margin:0;
+}
+#home {
+    background-color:white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    
+    margin-top: 20px;
+}
+
+.stat-card{
+    padding: 16px;
+    border-radius: 10px;
+    background-color:white;
+    text-align: center;
+}
+
+.stat-card h3{
+     color:red;
+}
+
+.stat-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color:black;
+}
+
+/*footer*/
+footer{
+    background-color: firebrick;
+    color:white;
+    padding: 30px 16px;
+    margin-top: 30px;
+}
+
+footer h2 {
+    margin-bottom: 8px;
+}
+
+footer p{
+    margin:10px 0;
+}
+
+.footer-links{
+   display: flex;
+   gap:23px;
+   justify-content: center;
+   flex-wrap: wrap;
+  margin: 20px 0;
+
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: white;
+    font: bold;
+}
+
+.footer-links a:hover{
+    text-decoration: underline;
+}
+.footer.copyright{
+    border-top:1px solid rgba(255, 255, 255, 0.4);
+    padding-top: 15px;
+    margin-top: 25px;
+    font-size: 15px;
 }

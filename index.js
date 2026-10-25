@@ -101,7 +101,7 @@ async function Reportsfetch(){
   
 
      if(!response.ok){
-      throw new error("Failed to fetch reports")
+      throw new Error("Failed to fetch reports")
      }
      const data= await response.json()
      console.log(data)
@@ -177,7 +177,7 @@ search.addEventListener("click", function () {
   Reportsdisplayed(matchingReports);
 
   if (matchingReports.length === 0) {
-    searchMessage.textContent = "No matching reports found.";
+    messageSEARCH.textContent = "No matching reports found.";
   } else {
     searchMessage.textContent =
       matchingReports.length + " matching report(s) found.";

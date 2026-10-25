@@ -60,7 +60,7 @@ function Reportsdisplayed(reportsToDisplay) {
 
     stat.addEventListener("change", function () {
       report.status = stat.value;
-      UpdateDashboard();
+      UpdateDash();
     });
 
     statusl.appendChild(stat);
@@ -71,7 +71,7 @@ function Reportsdisplayed(reportsToDisplay) {
 }
 
 //Update dashBoard numbers to show
-function UpdateDashboard() {
+function UpdateDash() {
   document.getElementById("total-reports").textContent = reports.length;
 
   document.getElementById("unresolved-reports").textContent = reports.filter(
@@ -108,7 +108,7 @@ async function Reportsfetch(){
     reports = data;
 
      Reportsdisplayed(reports)
-     UpdateDashboard()
+     UpdateDash()
      }catch(error){
       console.error("Error occured fetching reports",error)
       messages.textContent="Unable to load reports" 
@@ -152,7 +152,7 @@ report.addEventListener("submit", async function (event) {
         reports.push(data)
 
     Reportsdisplayed(reports);
-    UpdateDashboard();
+    UpdateDash();
 
     messages.textContent = "Your report was submitted successfully";
     
